@@ -6,45 +6,61 @@ using System.Threading.Tasks;
 
 namespace InheritanceDemo
 {
-    //internal class GrandParent
-    //{
-    //    public void function1()
-    //    {
-    //    }
-    //    public void function2()
-    //    {
-    //    }
-    //}
+
     internal class Parent
     {
+
+
+        
+
+
+        public Parent()  //consturctor
+        {
+            this.Id = 10;
+        }
+
+        //Data members
+        public int Id { get; set; }
+
+        //Member functions
+        public void function1()
+        {
+            Console.WriteLine("Parent class function 1 ");
+        }
+        public void function2()
+        {
+            Console.WriteLine("Parent class function 2 ");
+        }
+
+    }
+
+    internal class Child : Parent
+    {
+
+        //Constructor
+        public Child()
+        {
+            this.Name = "Ajay";
+        }
+
+        //Data members
+        public string Name { get; set; }
+
+
+        //Member functions
         public void function3()
         {
+            Console.WriteLine("Child class function 3 ");
+
+            Console.WriteLine("Name= " + Name);
+            Console.WriteLine("Id= " + Id);
+
+            
         }
         public void function4()
         {
+            Console.WriteLine("Child class function 4 ");
         }
-
-    }
-
-    internal class Child1 : Parent
-    {
-        public void function5()
-        {
-        }
-        public void function6()
-        {
-        }
-    }
-
-    internal class Child2 : Parent
-    {
-        public void function7()
-        {
-        }
-        public void function8()
-        {
-        }
-
     }
 
 }

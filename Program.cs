@@ -1,40 +1,38 @@
-﻿
+﻿using InheritanceDemo;
+
+class Program
+{
+    public static void Main()
+    {
+
+
+        Child C = new Child();
+        Parent P = new Parent();
+
+
+        Child c1;
+        Parent p1;
 
 
 
-using InheritanceDemo;
+        //c1 = P;  //invalid 
+         p1 = C;  //valid
+        //p1 is the varible of parent class but its the refernce of child class
 
-
-Child2 c2 = new Child2();
-c2.function3();
-c2.function4();
-c2.function7();
-c2.function8();
-
-
-Child1 c1 = new Child1();
-//c.function1();
-//c.function2();
-c1.function3();
-c1.function4();
-c1.function5();
-c1.function6();
+        //p1.function3();
 
 
 
 
-Parent p = new Parent();
-//p.function1();
-//p.function2();
-p.function3();
-p.function4();
-//p.function5();  
+        //Child C;   //This is Variable
+
+        //C = new Child();//Instance of the class
 
 
+        //Child C2 = new Child();  //instace of the class
 
-//GrandParent gp = new GrandParent();
+        //Child C3;   //variable of the class
+        //C3 = C2;   //Reference of the class
 
-//gp.function1();
-//gp.function2();
-//gp.function3();
-
+    }
+}
