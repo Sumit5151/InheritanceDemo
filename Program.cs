@@ -6,14 +6,23 @@ class Program
     {
 
 
+        Teacher teacher = new Teacher();
+        teacher.GetData();
+        teacher.PutData();
+       
         Child C = new Child();
-        Parent P = new Parent();
+
+        string Operation = "Add";
+
+        C.function4(10,20,Operation); //Actual paramters
+
+        Parent P = new Parent(10);
 
 
         Child c1;
         Parent p1;
 
-
+        
 
         //c1 = P;  //invalid 
          p1 = C;  //valid

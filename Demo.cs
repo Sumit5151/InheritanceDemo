@@ -7,16 +7,39 @@ using System.Threading.Tasks;
 namespace InheritanceDemo
 {
 
+
+    public class Teacher
+    {
+        public void GetData()
+        {  
+        }
+        public void PutData()
+        {
+
+        }
+    }
+
+
+   public class ParamanatTeacher: Teacher
+    {
+        void function1()
+        {
+
+        }
+    }
+
+
+
+
+
+
+
     internal class Parent
     {
-
-
-        
-
-
-        public Parent()  //consturctor
+        //consturctor
+        public Parent(int id)  
         {
-            this.Id = 10;
+            this.Id = id;
         }
 
         //Data members
@@ -38,7 +61,7 @@ namespace InheritanceDemo
     {
 
         //Constructor
-        public Child()
+        public Child():base(20)
         {
             this.Name = "Ajay";
         }
@@ -57,8 +80,21 @@ namespace InheritanceDemo
 
             
         }
-        public void function4()
+        public void function4(int num1, int num2, string operation)  //Formal paramters
         {
+
+            if(operation =="Add")
+            {
+                int result= num1 + num2;
+            }
+
+
+            if (operation == "Sub")
+            {
+                int result = num1 - num2;
+            }
+
+
             Console.WriteLine("Child class function 4 ");
         }
     }
